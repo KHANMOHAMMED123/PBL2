@@ -143,17 +143,32 @@ img {
 }
 
 #hero {
-  background: linear-gradient(TO RIGHT, #7a7a7a, #a09e9e, #8d8c8c);
+  position: relative;
+  background-image: url(https://images.pexels.com/photos/1767434/pexels-photo-1767434.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   background-position: center;
   background-size: cover;
 }
+#hero:after {
+  background-color: rgba(0, 0, 0, 0.25);
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
 .text-white {
   max-width: 885px;
   text-align: left;
-  color: black !important;
+  color: #fff !important;
 }
 .text-white-text {
-  color: black;
+  color: #fff;
 }
 /* SECTION TITLE */
 .section-title {
@@ -377,12 +392,24 @@ footer .line {
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
+  width: 100%;
+  height: 100%;
 }
 .form_close {
   position: absolute;
-  top: 200px;
-  right: 120px;
+  top: 20px;
+  right: 22px;
   cursor: pointer;
+  background-color: white;
+  border-radius: 20px;
+}
+.home.show {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
 }
 .home.show .form_container {
   opacity: 1;
@@ -549,6 +576,7 @@ input::placeholder {
   width: 100%;
   background-color: rgba(34, 34, 34, 0.85);
   border-radius: 3px;
+  height: 500px;
 }
 
 /**
@@ -560,6 +588,10 @@ input::placeholder {
   padding: 75px 45px;
   color: #fff;
   font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .user_registered-title,
@@ -604,7 +636,7 @@ input::placeholder {
   width: calc(50% - 30px);
   min-height: 420px;
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 50px;
   box-shadow: 2px 0 15px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   -webkit-transform: translate3d(100%, -50%, 0);
@@ -758,5 +790,10 @@ input::placeholder {
   .user_options-registered,
   .user_options-unregistered {
     padding: 50px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
   }
 }
