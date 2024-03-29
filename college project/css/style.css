@@ -372,15 +372,23 @@ img {
   flex: none;
 }
 .servies-pics {
-  width: 250px !important;
-  height: 140px !important;
+  width: 417px !important;
+  height: 190px !important;
+  max-width: none;
+  border-bottom-left-radius: 45px;
+  border-bottom-right-radius: 45px;
 }
+
 /* SERVICE */
 .service {
   position: relative;
   overflow: hidden;
   z-index: 2;
-  max-height: 466px;
+  max-height: 500px;
+}
+
+.mt-5 {
+  margin-top: 70px !important;
 }
 
 .service::after {
